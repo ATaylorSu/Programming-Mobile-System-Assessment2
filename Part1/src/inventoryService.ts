@@ -1,6 +1,10 @@
 /**
  * Inventory Service Module
  * Handles all CRUD operations and business logic for inventory management
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 1 - TypeScript
  */
 
 import {

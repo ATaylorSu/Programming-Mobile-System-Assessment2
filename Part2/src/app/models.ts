@@ -1,3 +1,11 @@
+/**
+ * Data Models
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 2 - Angular
+ */
+
 export enum Category {
   Electronics = 'Electronics',
   Furniture = 'Furniture',

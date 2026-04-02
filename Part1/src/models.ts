@@ -1,6 +1,10 @@
 /**
  * Data Models for Inventory Management System
  * Defines TypeScript interfaces and types for inventory items
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 1 - TypeScript
  */
 
 // Category enumeration for inventory items

@@ -1,3 +1,11 @@
+/**
+ * Inventory Page Component
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 2 - Angular
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { InventoryService } from '../../inventory.service';
 import {

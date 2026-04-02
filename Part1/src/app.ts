@@ -1,6 +1,10 @@
 /**
  * Main Application Entry Point
  * Inventory Management System
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 1 - TypeScript
  */
 
 import { InventoryService } from "./inventoryService.js";

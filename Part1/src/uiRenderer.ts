@@ -1,6 +1,10 @@
 /**
  * UI Renderer Module
  * Handles all DOM updates using innerHTML
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 1 - TypeScript
  */
 
 import { InventoryItem, Category, StockStatus } from "./models.js";

@@ -1,6 +1,10 @@
 /**
  * Validation Module for Inventory Management System
  * Handles input validation and sanitization
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 1 - TypeScript
  */
 
 import {

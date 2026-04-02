@@ -1,3 +1,11 @@
+/**
+ * Root Application Module
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 2 - Angular
+ */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

@@ -1,3 +1,11 @@
+/**
+ * Privacy Page Component
+ *
+ * Author: Haozhe Song
+ * Student ID: 24832672
+ * Part: Part 2 - Angular
+ */
+
 import { Component } from '@angular/core';
 
 @Component({
