@@ -1,0 +1,14 @@
+{
+  "name": "inventory-management-system",
+  "version": "1.0.0",
+  "description": "TypeScript Inventory Management System - Part 1",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "tsc && npx serve ."
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "serve": "^14.2.1"
+  }
+}
