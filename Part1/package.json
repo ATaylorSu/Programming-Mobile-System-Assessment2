@@ -5,7 +5,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "start": "tsc && npx serve ."
+    "start": "tsc && serve .",
+    "serve": "serve ."
   },
   "devDependencies": {
     "typescript": "^5.3.3",

@@ -83,57 +83,58 @@ export interface InventoryFilter {
 // Sample data for demonstration
 export const SAMPLE_INVENTORY_DATA: CreateInventoryItemDTO[] = [
   {
-    id: "INV001",
-    name: "MacBook Pro 14",
+    id: "SCU001",
+    name: "iPhone 17 Pro Max",
     category: Category.Electronics,
-    quantity: 25,
-    price: 1999.99,
+    quantity: 30,
+    price: 1599.00,
     supplier: "Apple Inc.",
     stockStatus: StockStatus.InStock,
     isPopular: true,
-    notes: "Latest M3 Pro chip model"
+    notes: "Latest flagship smartphone with A19 Pro chip"
   },
   {
-    id: "INV002",
-    name: "Ergonomic Office Chair",
-    category: Category.Furniture,
-    quantity: 8,
-    price: 349.99,
-    supplier: "Herman Miller",
+    id: "SCU002",
+    name: "Louis Vuitton Neverfull MM",
+    category: Category.Miscellaneous,
+    quantity: 5,
+    price: 2030.00,
+    supplier: "Louis Vuitton",
     stockStatus: StockStatus.LowStock,
-    isPopular: false,
-    notes: "High-end ergonomic chair"
+    isPopular: true,
+    notes: "Iconic monogram canvas tote bag"
   },
   {
-    id: "INV003",
-    name: "Winter Jacket",
-    category: Category.Clothing,
+    id: "SCU003",
+    name: "Huawei MateBook X Pro",
+    category: Category.Electronics,
+    quantity: 12,
+    price: 1499.00,
+    supplier: "Huawei Technologies",
+    stockStatus: StockStatus.InStock,
+    isPopular: false,
+    notes: "Ultra-slim 13th Gen Intel Core laptop"
+  },
+  {
+    id: "SCU004",
+    name: "Chanel N°5 Eau de Parfum",
+    category: Category.Miscellaneous,
     quantity: 0,
-    price: 199.99,
-    supplier: "North Face",
+    price: 185.00,
+    supplier: "Chanel",
     stockStatus: StockStatus.OutOfStock,
     isPopular: true,
-    notes: "Seasonal item - restocking next month"
+    notes: "Iconic floral fragrance, 100ml"
   },
   {
-    id: "INV004",
-    name: "Power Drill Set",
-    category: Category.Tools,
-    quantity: 42,
-    price: 129.99,
-    supplier: "DeWalt",
-    stockStatus: StockStatus.InStock,
-    isPopular: true
-  },
-  {
-    id: "INV005",
-    name: "USB-C Hub",
-    category: Category.Electronics,
-    quantity: 150,
-    price: 49.99,
-    supplier: "Anker",
+    id: "SCU005",
+    name: "Estée Lauder Double Wear Foundation",
+    category: Category.Miscellaneous,
+    quantity: 48,
+    price: 64.00,
+    supplier: "Estée Lauder Companies",
     stockStatus: StockStatus.InStock,
     isPopular: true,
-    notes: "7-in-1 hub with HDMI"
+    notes: "24-hour liquid foundation, multiple shades"
   }
 ];

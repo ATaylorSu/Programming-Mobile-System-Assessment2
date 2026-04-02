@@ -6,9 +6,9 @@
 /* ===== CSS Variables ===== */
 :root {
   /* Colors */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
+  --primary-color: #166534;
+  --primary-dark: #14532d;
+  --primary-light: #22c55e;
   --secondary-color: #64748b;
   --success-color: #10b981;
   --warning-color: #f59e0b;
@@ -16,9 +16,9 @@
   --error-color: #dc2626;
 
   /* Background colors */
-  --bg-primary: #f8fafc;
+  --bg-primary: #f0fdf4;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
+  --bg-tertiary: #dcfce7;
 
   /* Text colors */
   --text-primary: #1e293b;
@@ -26,7 +26,7 @@
   --text-muted: #94a3b8;
 
   /* Borders */
-  --border-color: #e2e8f0;
+  --border-color: #bbf7d0;
   --border-radius: 8px;
   --border-radius-lg: 12px;
 
@@ -149,7 +149,7 @@ body {
 .nav-tab.active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
-  background-color: rgba(37, 99, 235, 0.05);
+  background-color: rgba(22, 163, 74, 0.08);
 }
 
 .tab-icon {
@@ -216,9 +216,9 @@ body {
 }
 
 .notification-info {
-  background-color: #dbeafe;
-  border: 1px solid #bfdbfe;
-  color: #1e40af;
+  background-color: #d1fae5;
+  border: 1px solid #a7f3d0;
+  color: #166534;
 }
 
 .notification-icon {
@@ -374,8 +374,8 @@ body {
 
 /* Category badges */
 .category-electronics {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: #d1fae5;
+  color: #166534;
 }
 
 .category-furniture {
@@ -390,7 +390,7 @@ body {
 
 .category-tools {
   background-color: #dcfce7;
-  color: #166534;
+  color: #14532d;
 }
 
 .category-misc {
@@ -483,7 +483,7 @@ body {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.1);
 }
 
 .form-group input::placeholder,

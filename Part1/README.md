@@ -11,7 +11,7 @@
 ## Project Structure
 
 ```
-A2/
+Part1/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles
 ├── tsconfig.json       # TypeScript configuration
@@ -37,7 +37,7 @@ A2/
 1. Navigate to the project directory:
 
 ```bash
-cd "C:\Users\Song\OneDrive\Desktop\集合\Programming Mobile System\A2"
+cd "C:\Users\Song\OneDrive\Desktop\集合\Programming Mobile System\A2\Part1"
 ```
 
 2. Install dependencies:
@@ -54,13 +54,29 @@ npm install
 npm run build
 ```
 
-2. Start a local server:
+2. Start a local server (pick **one** of these):
 
 ```bash
-npx serve .
+npm start
 ```
 
-3. Open your browser and navigate to `http://localhost:3000`
+This compiles TypeScript and serves the **current folder** (`Part1`), where `index.html` lives.
+
+Or, after `npm run build`:
+
+```bash
+npm run serve
+```
+
+**Important:** Run these commands **from inside the `Part1` folder**. If you are already in `Part1`, do **not** run `npx serve Part1` — that looks for a subfolder named `Part1` and will return **404** for `/`. Use `npm run serve` or `npx serve .` instead.
+
+If you are in the parent folder `A2` (one level above `Part1`), then you can run:
+
+```bash
+npx serve Part1
+```
+
+3. Open your browser and navigate to `http://localhost:3000` (or the URL shown in the terminal)
 
 ### Development Mode (with auto-recompile)
 
