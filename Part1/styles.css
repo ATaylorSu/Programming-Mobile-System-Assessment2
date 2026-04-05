@@ -152,10 +152,6 @@ body {
   background-color: rgba(22, 163, 74, 0.08);
 }
 
-.tab-icon {
-  font-size: var(--font-lg);
-}
-
 /* ===== Main Content ===== */
 .main-content {
   flex: 1;
@@ -219,11 +215,6 @@ body {
   background-color: #d1fae5;
   border: 1px solid #a7f3d0;
   color: #166534;
-}
-
-.notification-icon {
-  font-size: var(--font-lg);
-  font-weight: 700;
 }
 
 .notification-message {
@@ -652,13 +643,6 @@ body {
   text-align: center;
   padding: var(--spacing-xl) * 2;
   color: var(--text-secondary);
-}
-
-.empty-icon {
-  font-size: 4rem;
-  display: block;
-  margin-bottom: var(--spacing-md);
-  opacity: 0.5;
 }
 
 .empty-state h3 {

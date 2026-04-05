@@ -357,11 +357,11 @@ export class UIRenderer {
       <div class="app-container">
         <header class="app-header"><h1>Inventory Management System</h1><p class="subtitle">Electronics Store</p></header>
         <nav class="nav-tabs">
-          <button class="nav-tab active" data-view="list" onclick="app.switchView('list')"><span class="tab-icon">&#128203;</span><span class="tab-text">All Items</span></button>
-          <button class="nav-tab" data-view="add" onclick="app.switchView('add')"><span class="tab-icon">&#10133;</span><span class="tab-text">Add Item</span></button>
-          <button class="nav-tab" data-view="update" onclick="app.switchView('update')"><span class="tab-icon">&#9998;</span><span class="tab-text">Update Item</span></button>
-          <button class="nav-tab" data-view="delete" onclick="app.switchView('delete')"><span class="tab-icon">&#128465;</span><span class="tab-text">Delete Item</span></button>
-          <button class="nav-tab" data-view="search" onclick="app.switchView('search')"><span class="tab-icon">&#128269;</span><span class="tab-text">Search</span></button>
+          <button class="nav-tab active" data-view="list" onclick="app.switchView('list')"><span class="tab-text">All Items</span></button>
+          <button class="nav-tab" data-view="add" onclick="app.switchView('add')"><span class="tab-text">Add Item</span></button>
+          <button class="nav-tab" data-view="update" onclick="app.switchView('update')"><span class="tab-text">Update Item</span></button>
+          <button class="nav-tab" data-view="delete" onclick="app.switchView('delete')"><span class="tab-text">Delete Item</span></button>
+          <button class="nav-tab" data-view="search" onclick="app.switchView('search')"><span class="tab-text">Search</span></button>
         </nav>
         <main class="main-content"><div id="notification-area" class="notification-area"></div><div id="content-area" class="content-area"></div></main>
         <footer class="app-footer"><p>Inventory Management System &copy; 2024</p></footer>
@@ -383,7 +383,7 @@ export class UIRenderer {
     const el = document.getElementById("content-area");
     if (!el) return;
     if (items.length === 0) {
-      el.innerHTML = `<div class="empty-state"><span class="empty-icon">&#128230;</span><h3>No Items Found</h3><p>Your inventory is empty.</p></div>`;
+      el.innerHTML = `<div class="empty-state"><h3>No Items Found</h3><p>Your inventory is empty.</p></div>`;
       return;
     }
     el.innerHTML = `<div class="view-header"><h2>All Inventory Items</h2><span class="item-count">${items.length} item(s)</span></div><div class="inventory-grid">${items.map((item) => this.renderInventoryCard(item)).join("")}</div>`;
@@ -495,7 +495,7 @@ export class UIRenderer {
     const el = document.getElementById("search-results");
     if (!el) return;
     if (!performed) { el.innerHTML = `<p class="placeholder-text">Enter a search term or select filters to find items.</p>`; return; }
-    if (items.length === 0) { el.innerHTML = `<div class="empty-state"><span class="empty-icon">&#128269;</span><h3>No Results Found</h3><p>No items match your search criteria.</p></div>`; return; }
+    if (items.length === 0) { el.innerHTML = `<div class="empty-state"><h3>No Results Found</h3><p>No items match your search criteria.</p></div>`; return; }
     el.innerHTML = `<div class="view-header"><h3>Search Results</h3><span class="item-count">${items.length} item(s) found</span></div><div class="inventory-grid">${items.map((item) => this.renderInventoryCard(item)).join("")}</div>`;
   }
 
@@ -504,7 +504,7 @@ export class UIRenderer {
     if (!el) return;
     const n = document.createElement("div");
     n.className = `notification notification-${type}`;
-    n.innerHTML = `<span class="notification-icon">${type === "success" ? "&#10003;" : type === "error" ? "&#10007;" : "&#8505;"}</span><span class="notification-message">${message}</span><button class="notification-close" onclick="this.parentElement.remove()">&#215;</button>`;
+    n.innerHTML = `<span class="notification-message">${message}</span><button type="button" class="notification-close" onclick="this.parentElement.remove()" aria-label="Close">×</button>`;
     el.appendChild(n);
     setTimeout(() => { if (n.parentElement) n.remove(); }, 5000);
   }

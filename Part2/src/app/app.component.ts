@@ -7,8 +7,6 @@
  */
 
 import { Component, OnInit, Injectable } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Router, Routes, RouterOutlet } from '@angular/router';
 
 // ============================================================================
 // MODELS
@@ -199,8 +197,8 @@ export class InventoryService {
             <p class="hero-subtitle">Part 2 - Angular Application</p>
             <p class="hero-desc">A modern, responsive inventory management application built with Angular. Manage your products efficiently with full CRUD operations, powerful search, and real-time filtering capabilities.</p>
             <div class="hero-actions">
-              <a routerLink="/inventory" class="btn btn-primary btn-lg"><span>&#128230;</span> Go to Inventory</a>
-              <a routerLink="/search" class="btn btn-secondary btn-lg"><span>&#128269;</span> Search Items</a>
+              <a routerLink="/inventory" class="btn btn-primary btn-lg">Go to Inventory</a>
+              <a routerLink="/search" class="btn btn-secondary btn-lg">Search Items</a>
             </div>
           </div>
         </div>
@@ -208,10 +206,10 @@ export class InventoryService {
       <section class="stats-section">
         <div class="container">
           <div class="stats-grid">
-            <div class="stat-card"><div class="stat-icon">&#128202;</div><div class="stat-value">{{ stats.totalItems }}</div><div class="stat-label">Total Items</div></div>
-            <div class="stat-card"><div class="stat-icon">&#11088;</div><div class="stat-value">{{ stats.popularCount }}</div><div class="stat-label">Popular Items</div></div>
-            <div class="stat-card"><div class="stat-icon">&#129296;</div><div class="stat-value">{{ stats.totalValue | currency:'USD':'symbol':'1.2-2' }}</div><div class="stat-label">Total Value</div></div>
-            <div class="stat-card"><div class="stat-icon">&#128260;</div><div class="stat-value">5</div><div class="stat-label">Categories</div></div>
+            <div class="stat-card"><div class="stat-value">{{ stats.totalItems }}</div><div class="stat-label">Total Items</div></div>
+            <div class="stat-card"><div class="stat-value">{{ stats.popularCount }}</div><div class="stat-label">Popular Items</div></div>
+            <div class="stat-card"><div class="stat-value">{{ stats.totalValue | currency:'USD':'symbol':'1.2-2' }}</div><div class="stat-label">Total Value</div></div>
+            <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Categories</div></div>
           </div>
         </div>
       </section>
@@ -219,12 +217,12 @@ export class InventoryService {
         <div class="container">
           <h2 class="section-title">Key Features</h2>
           <div class="features-grid">
-            <div class="feature-card"><div class="feature-icon">&#10133;</div><h3>Add Items</h3><p>Create new inventory items with full validation. Support for all product categories and stock statuses.</p></div>
-            <div class="feature-card"><div class="feature-icon">&#9998;</div><h3>Edit Items</h3><p>Update item details easily using item name as the identifier. Partial updates supported.</p></div>
-            <div class="feature-card"><div class="feature-icon">&#128465;</div><h3>Delete Items</h3><p>Remove items with confirmation dialog to prevent accidental deletions.</p></div>
-            <div class="feature-card"><div class="feature-icon">&#128269;</div><h3>Search &amp; Filter</h3><p>Find items by name, category, stock status, or popularity with powerful filtering.</p></div>
-            <div class="feature-card"><div class="feature-icon">&#128241;</div><h3>Responsive Design</h3><p>Works seamlessly on desktop, tablet, and mobile devices with adaptive layouts.</p></div>
-            <div class="feature-card"><div class="feature-icon">&#128274;</div><h3>Privacy &amp; Security</h3><p>Built with security best practices. Read our privacy analysis for details.</p></div>
+            <div class="feature-card"><h3>Add Items</h3><p>Create new inventory items with full validation. Support for all product categories and stock statuses.</p></div>
+            <div class="feature-card"><h3>Edit Items</h3><p>Update item details easily using item name as the identifier. Partial updates supported.</p></div>
+            <div class="feature-card"><h3>Delete Items</h3><p>Remove items with confirmation dialog to prevent accidental deletions.</p></div>
+            <div class="feature-card"><h3>Search &amp; Filter</h3><p>Find items by name, category, stock status, or popularity with powerful filtering.</p></div>
+            <div class="feature-card"><h3>Responsive Design</h3><p>Works seamlessly on desktop, tablet, and mobile devices with adaptive layouts.</p></div>
+            <div class="feature-card"><h3>Privacy &amp; Security</h3><p>Built with security best practices. Read our privacy analysis for details.</p></div>
           </div>
         </div>
       </section>
@@ -232,10 +230,10 @@ export class InventoryService {
         <div class="container">
           <h2 class="section-title">Quick Navigation</h2>
           <div class="quick-links-grid">
-            <a routerLink="/inventory" class="quick-link-card"><span class="quick-link-icon">&#128230;</span><span class="quick-link-text">Manage Inventory</span><span class="quick-link-arrow">&#8594;</span></a>
-            <a routerLink="/search" class="quick-link-card"><span class="quick-link-icon">&#128269;</span><span class="quick-link-text">Search Items</span><span class="quick-link-arrow">&#8594;</span></a>
-            <a routerLink="/privacy" class="quick-link-card"><span class="quick-link-icon">&#128272;</span><span class="quick-link-text">Privacy &amp; Security</span><span class="quick-link-arrow">&#8594;</span></a>
-            <a routerLink="/help" class="quick-link-card"><span class="quick-link-icon">&#10067;</span><span class="quick-link-text">Help &amp; FAQ</span><span class="quick-link-arrow">&#8594;</span></a>
+            <a routerLink="/inventory" class="quick-link-card"><span class="quick-link-text">Manage Inventory</span></a>
+            <a routerLink="/search" class="quick-link-card"><span class="quick-link-text">Search Items</span></a>
+            <a routerLink="/privacy" class="quick-link-card"><span class="quick-link-text">Privacy &amp; Security</span></a>
+            <a routerLink="/help" class="quick-link-card"><span class="quick-link-text">Help &amp; FAQ</span></a>
           </div>
         </div>
       </section>
@@ -252,23 +250,19 @@ export class InventoryService {
     .stats-section { padding: 60px 0; background-color: var(--bg-tertiary); }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); }
     .stat-card { background-color: var(--bg-secondary); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
-    .stat-icon { font-size: 2rem; margin-bottom: var(--spacing-md); }
     .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary-color); margin-bottom: var(--spacing-xs); }
     .stat-label { font-size: var(--font-sm); color: var(--text-secondary); }
     .features-section { padding: 60px 0; }
     .section-title { font-size: var(--font-2xl); font-weight: 700; text-align: center; margin-bottom: var(--spacing-xl); color: var(--text-primary); }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); }
     .feature-card { background-color: var(--bg-secondary); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); text-align: center; }
-    .feature-icon { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
     .feature-card h3 { font-size: var(--font-lg); margin-bottom: var(--spacing-sm); color: var(--text-primary); }
     .feature-card p { font-size: var(--font-sm); color: var(--text-secondary); line-height: 1.6; }
     .quick-links-section { padding: 60px 0; background-color: var(--bg-tertiary); }
     .quick-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-md); }
     .quick-link-card { display: flex; align-items: center; gap: var(--spacing-md); background-color: var(--bg-secondary); border-radius: var(--border-radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: all var(--transition-fast); text-decoration: none; color: var(--text-primary); }
     .quick-link-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--primary-color); }
-    .quick-link-icon { font-size: 1.5rem; }
     .quick-link-text { flex: 1; font-weight: 500; }
-    .quick-link-arrow { color: var(--primary-color); font-size: var(--font-lg); }
     @media (max-width: 768px) { .hero h1 { font-size: 1.75rem; } .hero-actions { flex-direction: column; align-items: center; } .hero-actions .btn { width: 100%; max-width: 280px; } }
   `]
 })
@@ -291,18 +285,18 @@ export class HomeComponent implements OnInit {
       </div>
       <div class="container">
         <div class="tab-nav">
-          <button class="tab-btn" [class.active]="activeTab === 'list'" (click)="setTab('list')">&#128203; View All</button>
-          <button class="tab-btn" [class.active]="activeTab === 'add'" (click)="setTab('add')">&#10133; Add Item</button>
-          <button class="tab-btn" [class.active]="activeTab === 'update'" (click)="setTab('update')">&#9998; Update Item</button>
-          <button class="tab-btn" [class.active]="activeTab === 'delete'" (click)="setTab('delete')">&#128465; Delete Item</button>
+          <button class="tab-btn" [class.active]="activeTab === 'list'" (click)="setTab('list')">View All</button>
+          <button class="tab-btn" [class.active]="activeTab === 'add'" (click)="setTab('add')">Add Item</button>
+          <button class="tab-btn" [class.active]="activeTab === 'update'" (click)="setTab('update')">Update Item</button>
+          <button class="tab-btn" [class.active]="activeTab === 'delete'" (click)="setTab('delete')">Delete Item</button>
         </div>
         <div class="tab-content">
           <div *ngIf="activeTab === 'list'" class="tab-panel">
             <div class="panel-header"><h2>All Inventory Items</h2><span class="item-count">{{ items.length }} items</span></div>
-            <div *ngIf="items.length === 0" class="empty-state"><span class="icon">&#128230;</span><h3>No items found</h3><p>Add some items to get started</p></div>
+            <div *ngIf="items.length === 0" class="empty-state"><h3>No items found</h3><p>Add some items to get started</p></div>
             <div class="inventory-grid">
               <div *ngFor="let item of items" class="inventory-card">
-                <div class="card-header"><span class="item-name">{{ item.name }}</span><span *ngIf="item.isPopular" class="badge badge-popular">&#11088; Popular</span></div>
+                <div class="card-header"><span class="item-name">{{ item.name }}</span><span *ngIf="item.isPopular" class="badge badge-popular">Popular</span></div>
                 <div class="card-body">
                   <div class="card-id">{{ item.id }}</div>
                   <div class="card-details">
@@ -520,18 +514,18 @@ export class InventoryComponent implements OnInit {
               <div class="form-group checkbox-group"><label class="checkbox-wrapper"><input type="checkbox" [(ngModel)]="filter.showPopularOnly"><span>Popular Items Only</span></label></div>
             </div>
             <div class="search-actions">
-              <button class="btn btn-primary" (click)="performSearch()"><span>&#128269;</span> Search</button>
-              <button class="btn btn-secondary" (click)="showAll()"><span>&#128203;</span> Show All</button>
-              <button class="btn btn-secondary" (click)="showPopular()"><span>&#11088;</span> Show Popular</button>
-              <button class="btn btn-secondary" (click)="clearFilters()"><span>&#128260;</span> Clear Filters</button>
+              <button class="btn btn-primary" (click)="performSearch()">Search</button>
+              <button class="btn btn-secondary" (click)="showAll()">Show All</button>
+              <button class="btn btn-secondary" (click)="showPopular()">Show Popular</button>
+              <button class="btn btn-secondary" (click)="clearFilters()">Clear Filters</button>
             </div>
           </div>
           <div class="search-results">
             <div class="results-header"><h2>Results</h2><span class="item-count">{{ results.length }} items found</span></div>
-            <div *ngIf="results.length === 0" class="empty-state"><span class="icon">&#128269;</span><h3>No items found</h3><p>Try adjusting your search criteria</p></div>
+            <div *ngIf="results.length === 0" class="empty-state"><h3>No items found</h3><p>Try adjusting your search criteria</p></div>
             <div class="results-grid">
               <div *ngFor="let item of results" class="result-card">
-                <div class="card-header"><span class="item-name">{{ item.name }}</span><span *ngIf="item.isPopular" class="badge badge-popular">&#11088; Popular</span></div>
+                <div class="card-header"><span class="item-name">{{ item.name }}</span><span *ngIf="item.isPopular" class="badge badge-popular">Popular</span></div>
                 <div class="card-body">
                   <div class="card-id">{{ item.id }}</div>
                   <div class="card-details">
@@ -611,7 +605,7 @@ export class SearchComponent implements OnInit {
       <div class="page-header"><div class="container"><h1>Privacy &amp; Security Analysis</h1><p>Understanding the privacy and security considerations in our application</p></div></div>
       <div class="container">
         <div class="content-section">
-          <h2>&#128274; Data Storage Security</h2>
+          <h2>Data Storage Security</h2>
           <div class="card">
             <div class="card-body">
               <h3>Client-Side Data Storage</h3>
@@ -655,7 +649,7 @@ export class PrivacyComponent {}
       <div class="page-header"><div class="container"><h1>Help &amp; FAQ</h1><p>Find answers to common questions and troubleshooting guidance</p></div></div>
       <div class="container">
         <section class="quick-start">
-          <h2>&#128640; Quick Start Guide</h2>
+          <h2>Quick Start Guide</h2>
           <div class="card"><div class="card-body">
             <h3>Getting Started</h3>
             <ol class="step-list">
@@ -668,16 +662,16 @@ export class PrivacyComponent {}
           </div></div>
         </section>
         <section class="faq-section">
-          <h2>&#10067; Frequently Asked Questions</h2>
+          <h2>Frequently Asked Questions</h2>
           <div class="faq-item" *ngFor="let faq of faqs; let i = index">
             <button class="faq-question" (click)="toggleFaq(i)" [class.expanded]="expandedFaq === i">
-              <span>{{ faq.question }}</span><span class="faq-icon">{{ expandedFaq === i ? '\u2212' : '+' }}</span>
+              <span>{{ faq.question }}</span><span class="faq-icon">{{ expandedFaq === i ? '-' : '+' }}</span>
             </button>
             <div class="faq-answer" [class.open]="expandedFaq === i"><p>{{ faq.answer }}</p></div>
           </div>
         </section>
         <section class="troubleshooting">
-          <h2>&#128736; Troubleshooting</h2>
+          <h2>Troubleshooting</h2>
           <div class="card-grid">
             <div class="card"><div class="card-body"><h3>Cannot Add Item</h3><p><strong>Problem:</strong> Getting an error when trying to add an item.</p><p><strong>Solutions:</strong></p><ul><li>Make sure Item ID is 3-20 alphanumeric characters</li><li>Ensure Item ID is unique</li><li>Fill in all required fields marked with *</li><li>Quantity and Price must be 0 or positive numbers</li></ul></div></div>
             <div class="card"><div class="card-body"><h3>Cannot Find Item to Update</h3><p><strong>Problem:</strong> Item not found when updating.</p><p><strong>Solutions:</strong></p><ul><li>Check the spelling of the item name (case-insensitive)</li><li>View all items first to see the exact name</li><li>Use the Search page to find items</li></ul></div></div>
@@ -685,7 +679,7 @@ export class PrivacyComponent {}
           </div>
         </section>
         <section class="keyboard-shortcuts">
-          <h2>&#9000; Navigation Tips</h2>
+          <h2>Navigation Tips</h2>
           <div class="card"><div class="card-body">
             <div class="shortcuts-grid">
               <div class="shortcut-item"><span class="shortcut-key">Home Page</span><span class="shortcut-desc">Click "Home" in the navigation bar</span></div>
@@ -742,21 +736,12 @@ export class HelpComponent {
 // APP COMPONENT (ROOT)
 // ============================================================================
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'inventory', component: InventoryComponent },
-  { path: 'search', component: SearchComponent },
-  { path: 'privacy', component: PrivacyComponent },
-  { path: 'help', component: HelpComponent },
-  { path: '**', redirectTo: '' }
-];
-
 @Component({
   selector: 'app-root',
   template: `
     <div class="app-wrapper">
       <nav class="navbar">
-        <div class="navbar-brand"><span class="brand-icon">&#128230;</span><span class="brand-text">Inventory System</span></div>
+        <div class="navbar-brand"><span class="brand-text">Inventory System</span></div>
         <div class="navbar-links">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
           <a routerLink="/inventory" routerLinkActive="active">Inventory</a>
@@ -781,7 +766,6 @@ const appRoutes: Routes = [
     .app-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
     .navbar { background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: white; padding: 0 var(--spacing-lg); display: flex; align-items: center; justify-content: space-between; height: 60px; box-shadow: var(--shadow-md); position: sticky; top: 0; z-index: 100; }
     .navbar-brand { display: flex; align-items: center; gap: var(--spacing-sm); font-weight: 600; font-size: var(--font-lg); }
-    .brand-icon { font-size: 1.5rem; }
     .navbar-links { display: flex; gap: var(--spacing-xs); }
     .navbar-links a { color: rgba(255, 255, 255, 0.85); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--border-radius); font-size: var(--font-sm); font-weight: 500; transition: all var(--transition-fast); text-decoration: none; }
     .navbar-links a:hover { background-color: rgba(255, 255, 255, 0.15); color: white; }
@@ -794,7 +778,7 @@ const appRoutes: Routes = [
     .navbar-mobile a.active, .navbar-mobile a:hover { background-color: rgba(255, 255, 255, 0.15); color: white; }
     .main-content { flex: 1; }
     .app-footer { background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); padding: var(--spacing-lg); text-align: center; color: var(--text-muted); font-size: var(--font-sm); }
-    @media (max-width: 768px) { .navbar-links { display: none; } .mobile-menu-btn { display: flex; } .navbar-brand .brand-text { display: none; } }
+    @media (max-width: 768px) { .navbar-links { display: none; } .mobile-menu-btn { display: flex; } }
   `]
 })
 export class AppComponent {
