@@ -31,23 +31,14 @@ All data stored in-browser (session only). Same model as Part 1:
 ## Project Structure
 
 ```
-part2/
+Part2/
 ├── src/
 │   ├── index.html
 │   ├── main.ts
 │   ├── styles.css
 │   └── app/
-│       ├── app.module.ts
-│       ├── app.component.ts
-│       ├── app-routing.module.ts
-│       ├── models.ts
-│       ├── inventory.service.ts
-│       └── components/
-│           ├── home/home.component.ts
-│           ├── inventory/inventory.component.ts
-│           ├── search/search.component.ts
-│           ├── privacy/privacy.component.ts
-│           └── help/help.component.ts
+│       ├── app.module.ts    # Root module with routes declared
+│       └── app.component.ts  # Root component (includes all page components, service, models)
 ├── angular.json
 ├── package.json
 └── tsconfig.json

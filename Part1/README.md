@@ -11,10 +11,7 @@ Part1/
 ├── dist/               # Compiled JavaScript output
 └── src/
     ├── models.ts       # TypeScript interfaces and enums
-    ├── validation.ts   # Form validation logic
-    ├── inventoryService.ts  # Business logic and data management
-    ├── uiRenderer.ts   # UI rendering with innerHTML
-    └── app.ts          # Main application entry point
+    └── app.ts         # Main application entry point (includes service, validation, UI renderer)
 ```
 
 ## Getting Started

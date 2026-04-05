@@ -8,14 +8,19 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { InventoryComponent } from './components/inventory/inventory.component';
-import { SearchComponent } from './components/search/search.component';
-import { PrivacyComponent } from './components/privacy/privacy.component';
-import { HelpComponent } from './components/help/help.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent, HomeComponent, InventoryComponent, SearchComponent, PrivacyComponent, HelpComponent } from './app.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'inventory', component: InventoryComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'help', component: HelpComponent },
+  { path: '**', redirectTo: '' }
+];
 
 @NgModule({
   declarations: [
@@ -28,9 +33,10 @@ import { HelpComponent } from './components/help/help.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
